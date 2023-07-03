@@ -15,10 +15,11 @@ await fetchAccount({ publicKey: appKey });
 console.log(zkApp.num.get().toString());
 
 const accountPrivateKey = PrivateKey.fromBase58(
-  'EKF2vQ1rZxkcybXoWAer6Bid4QY8Dg4RWGWc62dGiKuSVhvHtxnS'
+  'EKEUTo45qdrfbhYmULkvq9SZdrgiGcsfQnhzKwm3xbrZqBwffUiP'
 );
 const accountPublicKey = accountPrivateKey.toPublicKey();
 
+console.log('compiling...');
 await Add.compile();
 
 const tx = await Mina.transaction(
